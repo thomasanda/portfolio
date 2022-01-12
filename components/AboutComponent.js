@@ -37,12 +37,14 @@ export default function AboutComponent() {
               </h1>
               <p className='mt-3'>
                 If you are wondering about something, send me an{' '}
-                <a
-                  href={`mailto:${userData.email}`}
-                  className='text-emerald-300 border-b-2 border-emerald-800 font-bold'
-                >
-                  e-mail
-                </a>
+                <div className='inline-block transform hover:scale-110 hover:rotate-6'>
+                  <a
+                    href={`mailto:${userData.email}`}
+                    className='text-emerald-300 font-bold'
+                  >
+                    e-mail
+                  </a>
+                </div>{' '}
                 !
               </p>
             </div>
@@ -50,14 +52,16 @@ export default function AboutComponent() {
               <h1 className='text-xl font-semibold text-gray-700'>Resume</h1>
               <p className='mt-3'>
                 Please take a look at my{' '}
-                <a
-                  href={userData.cvUrl}
-                  target='_blank'
-                  className='text-emerald-300 border-b-2 border-emerald-800 font-bold'
-                  rel='noreferrer'
-                >
-                  CV
-                </a>{' '}
+                <div className='inline-block transform hover:scale-125 hover:-rotate-6'>
+                  <a
+                    href={userData.cvUrl}
+                    target='_blank'
+                    className='text-emerald-300 font-bold'
+                    rel='noreferrer'
+                  >
+                    CV
+                  </a>
+                </div>{' '}
                 if you are interested!
               </p>
             </div>

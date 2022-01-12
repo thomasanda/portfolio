@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Navbar from './Navbar'
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 export default function Container({ children, ...customMeta }) {
   const router = useRouter();
@@ -45,6 +46,7 @@ export default function Container({ children, ...customMeta }) {
       <main>
         <Navbar />
         <div>{children}</div>
+        <Footer />
       </main>
     </div>
   );
