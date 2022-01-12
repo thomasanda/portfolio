@@ -1,5 +1,6 @@
 import Container from '../components/Container';
 import LatestCode from '../components/LatestCode';
+import Hero from '../components/Hero';
 import userData from '@constants/data';
 import getLatestRepos from '@lib/getLatestRepos';
 
@@ -9,6 +10,7 @@ export default function Home({ repositories }) {
       title='Thomas Anda - Developer, Musician and Composer'
       description='FullStack JavaScript Developer'
     >
+      <Hero />
       <LatestCode repositories={repositories} />
     </Container>
   )
