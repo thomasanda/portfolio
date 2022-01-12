@@ -13,7 +13,7 @@ export default function AboutComponent() {
       <div className='bg-orange-300 -mt-9'>
         <div className='text-container max-w-6xl mx-auto pt-20'>
           <p
-            className='leading-loose text-1xl md:mx-4 lg:mx-auto'
+            className='leading-loose text-3xl md:mx-4 lg:mx-auto'
             style={{ lineHeight: '3rem' }}
           >
             {userData.about.title} Currently working for:{' '}
@@ -35,7 +35,7 @@ export default function AboutComponent() {
               <h1 className='text-xl font-semibold text-gray-700'>
                 Contact
               </h1>
-              <p className='mt-3'>
+              <span className='mt-3'>
                 If you are wondering about something, send me an{' '}
                 <div className='inline-block transform hover:scale-110 hover:rotate-6'>
                   <a
@@ -46,11 +46,11 @@ export default function AboutComponent() {
                   </a>
                 </div>{' '}
                 !
-              </p>
+              </span>
             </div>
             <div className='mt-8'>
               <h1 className='text-xl font-semibold text-gray-700'>Resume</h1>
-              <p className='mt-3'>
+              <span className='mt-3'>
                 Please take a look at my{' '}
                 <div className='inline-block transform hover:scale-125 hover:-rotate-6'>
                   <a
@@ -63,7 +63,7 @@ export default function AboutComponent() {
                   </a>
                 </div>{' '}
                 if you are interested!
-              </p>
+              </span>
             </div>
             <h1 className='text-xl font-semibold text-gray-700 mt-8'>SoMe</h1>
             <div className='mt-4 ml-4'>
@@ -75,10 +75,10 @@ export default function AboutComponent() {
                   rel='noreferrer'
                 >
                   <div className='my-4'><FaLinkedin /></div>
-                  <p className='font-mono relative overflow-hidden'>
+                  <span className='font-mono relative overflow-hidden'>
                     <div className='absolute h-0.5 w-full bg-emerald-300 bottom-0 -translate-x-24 group-hover:translate-x-0 transition duration-300'></div>
                     LinkedIn
-                  </p>
+                  </span>
                 </a>
               </div>
               <div className='flex flex-row justify-start items-center'>
@@ -89,10 +89,10 @@ export default function AboutComponent() {
                   rel='noreferrer'
                 >
                   <div className='my-4'><FaGithub /></div>
-                  <p className='font-mono relative overflow-hidden'>
+                  <span className='font-mono relative overflow-hidden'>
                     <div className='absolute h-0.5 w-full bg-emerald-300 bottom-0 -translate-x-24 group-hover:translate-x-0 transition duration-300'></div>
                     Github
-                  </p>
+                  </span>
                 </a>
               </div>
               <div className='flex flex-row justify-start items-center'>
@@ -103,10 +103,10 @@ export default function AboutComponent() {
                   rel='noreferrer'
                 >
                   <div className='my-4'><FaInstagram /></div>
-                  <p className='font-mono relative overflow-hidden'>
+                  <span className='font-mono relative overflow-hidden'>
                     <div className='absolute h-0.5 w-full bg-emerald-300 bottom-0 -translate-x-24 group-hover:translate-x-0 transition duration-300'></div>
                     Instagram
-                  </p>
+                  </span>
                 </a>
               </div>
               <div className='flex flex-row justify-start items-center'>
@@ -117,10 +117,10 @@ export default function AboutComponent() {
                   rel='noreferrer'
                 >
                   <div className='my-4'><FaTwitter /></div>
-                  <p className='font-mono relative overflow-hidden'>
+                  <span className='font-mono relative overflow-hidden'>
                     <div className='absolute h-0.5 w-full bg-emerald-300 bottom-0 -translate-x-24 group-hover:translate-x-0 transition duration-300'></div>
                     Twitter
-                  </p>
+                  </span>
                 </a>
               </div>
             </div>

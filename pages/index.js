@@ -1,14 +1,28 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Container from '../components/Container';
+import LatestCode from '../components/LatestCode';
 import userData from '@constants/data';
+import getLatestRepos from '@lib/getLatestRepos';
 
-export default function Home() {
+export default function Home({ repositories }) {
   return (
     <Container
       title='Thomas Anda - Developer, Musician and Composer'
       description='FullStack JavaScript Developer'
-    ></Container>
+    >
+      <LatestCode repositories={repositories} />
+    </Container>
   )
 }
+
+export const getServerSideProps = async () => {
+  let token = process.env.GITHUB_AUTH_TOKEN;
+
+  const repositories = await getLatestRepos(userData, token);
+
+  return {
+    props: {
+      repositories,
+    },
+  };
+};
+
