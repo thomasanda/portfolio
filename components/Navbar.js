@@ -20,7 +20,7 @@ export default function Navbar() {
           <Link href='/'>
             <a>
               <h1 className='text-xl font-semibold'>{userData.name}</h1>
-              <p className='text-base font-light text-gray-500'>{userData.jobTitle}</p>
+              <p className='text-base font-light text-gray-500 mb-1'>{userData.jobTitle}</p>
             </a>
           </Link>
         </div>
@@ -52,7 +52,29 @@ export default function Navbar() {
             </a>
           </Link>
           <Link href='/experience'>
-            <a>Experience{' '}</a>
+            <a
+              className={`text-base ${router.asPath === '/experience'
+                ? 'text-gray-800 font-bold'
+                : 'text-gray-600 font-normal'
+                }`}
+            >
+              Experience{' '}
+              {router.asPath === '/experience' && (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="bi bi-arrow-down inline-block h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 29"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  />
+                </svg>)}
+            </a>
           </Link>
         </div>
       </div>
