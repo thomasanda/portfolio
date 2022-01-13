@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-// import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 import userData from '@constants/data';
 
 export default function Navbar() {
   const router = useRouter();
-  // const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -60,6 +58,31 @@ export default function Navbar() {
             >
               Experience{' '}
               {router.asPath === '/experience' && (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="bi bi-arrow-down inline-block h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 29"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  />
+                </svg>)}
+            </a>
+          </Link>
+          <Link href='/a3cfb4b2bc1b4980994d5767ec8d1996'>
+            <a
+              className={`text-base ${router.asPath === '/a3cfb4b2bc1b4980994d5767ec8d1996'
+                ? 'text-gray-800 font-bold'
+                : 'text-gray-600 font-normal'
+                }`}
+            >
+              Blog{' '}
+              {router.asPath === '/a3cfb4b2bc1b4980994d5767ec8d1996' && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="bi bi-arrow-down inline-block h-5 w-5"
