@@ -1,6 +1,7 @@
 import React from 'react';
 import userData from '@constants/data';
 import { FaInstagram, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { RoughNotation } from 'react-rough-notation';
 
 export default function AboutComponent() {
   return (
@@ -40,9 +41,13 @@ export default function AboutComponent() {
                 <div className='inline-block transform hover:scale-110 hover:rotate-6'>
                   <a
                     href={`mailto:${userData.email}`}
-                    className='text-emerald-300 font-bold'
                   >
-                    e-mail
+                    <RoughNotation
+                      type='box'
+                      show={true}
+                    >
+                      e-mail
+                    </RoughNotation>
                   </a>
                 </div>{' '}
                 !
@@ -56,10 +61,15 @@ export default function AboutComponent() {
                   <a
                     href={userData.cvUrl}
                     target='_blank'
-                    className='text-emerald-300 font-bold'
                     rel='noreferrer'
                   >
-                    CV
+                    <RoughNotation
+                      type='circle'
+                      show={true}
+                      color='blue'
+                    >
+                      CV
+                    </RoughNotation>
                   </a>
                 </div>{' '}
                 if you are interested!
